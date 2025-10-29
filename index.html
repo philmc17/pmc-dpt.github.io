@@ -36,13 +36,37 @@
     .logo img{width:34px;height:34px;border-radius:8px}
     .cta-bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffb3;backdrop-filter:blur(6px);border-top:1px solid #e2e8f0;padding:10px;display:flex;gap:10px;justify-content:center}
     @media(min-width:768px){.cta-bar{display:none}}
+    /* === Brand typography (adds premium look to your name/tagline) === */
+.brand{
+  font-weight: 900;
+  font-size: clamp(28px, 4.5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+.brand-sub{
+  color: var(--slate, #334155); /* uses your var if defined, else safe fallback */
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 18px);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Keep the logo block tidy */
+.logo{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
   </style>
 </head>
 <body>
   <header class="wrap" style="padding:16px 0;">
   <div class="logo" style="display:flex;align-items:center;gap:10px;justify-content:center;">
     <img src="/pmc-dpt.github.io/assets/pmc-favicon.png?v=3" alt="PMC" width="34" height="34" style="border-radius:8px;">
-    <strong>Philip M. Christ, DPT</strong>
+    <div class="brand">Philip M. Christ, DPT</div>
+    <div class="brand-sub">Exclusive. Private. Personalized. Care.</div>
   </div>
   <nav style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
     <a class="btn" href="#spine">Spine Specialty</a>

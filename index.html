@@ -145,6 +145,53 @@
     text-align:left;
   }
 }
+    /* === Corner logos + centered brand === */
+.header-band{
+  position: relative;
+  padding: 22px 0 12px;
+}
+.logo-corner{
+  position: absolute;
+  top: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--line,#e2e8f0);
+  object-fit: cover;
+}
+.logo-left{ left: 0; }
+.logo-right{ right: 0; }
+
+.brand-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.brand{
+  margin: 0;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  font-size: clamp(28px, 4vw, 48px);
+}
+.brand-sub{
+  margin: 16px 0 0 0; /* brings tagline down “two spaces” */
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--muted,#334155);
+  font-size: clamp(13px, 1.5vw, 18px);
+}
+
+/* Center the Spine section heading and its paragraph */
+#spine .wrap, #spine{
+  text-align: center;
+}
+#spine .lead{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+}
   </style>
 </head>
 <body>

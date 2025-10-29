@@ -87,6 +87,64 @@
     /* Footer */
     footer{padding:22px 0;text-align:center;color:var(--muted)}
     footer .links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+    /* === Fix header logo/name/tagline overlap and spacing === */
+.brand-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;            /* allow wrapping on small screens */
+}
+
+/* Stack the text neatly and prevent collision with the logo */
+.brand-row > div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;        /* center under the logo */
+}
+
+/* Clean, non-overlapping headline sizing */
+.brand{
+  margin:0;
+  font-weight:900;
+  line-height:1.12;          /* increase line-height to avoid overlap */
+  letter-spacing:0.2px;
+  font-size:clamp(26px, 3.6vw, 44px); /* slightly smaller cap to prevent wrap clash */
+  word-break:normal;
+  overflow-wrap:break-word;
+  white-space:normal;
+}
+
+/* Tagline with safe spacing under the name */
+.brand-sub{
+  margin:6px 0 0 0;          /* remove negative margin; add safe space */
+  line-height:1.25;
+  font-weight:600;
+  color:var(--muted,#334155);
+  font-size:clamp(13px, 1.5vw, 18px);
+  text-align:center;
+}
+
+/* Tidy, non-dominant logo sizing */
+.brand-mark{
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  border:1px solid var(--line,#e2e8f0);
+  object-fit:cover;
+}
+
+/* On wider screens, keep the logo left and text right, still aligned */
+@media (min-width: 860px){
+  .brand-row{
+    flex-wrap:nowrap;        /* no wrap needed on wide screens */
+    gap:14px;
+  }
+  .brand-row > div{
+    align-items:flex-start;  /* left-align text next to the logo */
+    text-align:left;
+  }
+}
   </style>
 </head>
 <body>

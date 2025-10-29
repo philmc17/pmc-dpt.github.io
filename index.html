@@ -192,6 +192,37 @@
   margin-right: auto;
   max-width: 920px;
 }
+/* === Force true centering for name + credential === */
+.brand-center{
+  display:grid;
+  place-items:center;         /* perfect center horizontally and vertically within the block */
+  text-align:center;
+  margin:0 auto;
+  max-width:100%;
+}
+.brand-name{
+  font-weight:900;
+  letter-spacing:0.3px;
+  line-height:1.12;
+  font-size:clamp(30px, 4.4vw, 54px);
+}
+.brand-cred{
+  margin-top:14px;            /* drop the tagline under the name */
+  font-weight:600;
+  line-height:1.25;
+  font-size:clamp(14px, 1.6vw, 20px);
+  color:var(--muted,#334155);
+}
+
+/* === Neutralize any previous wide-screen left-alignment rules === */
+@media (min-width: 860px){
+  .brand-row > div,
+  .brand,
+  .brand-sub{
+    text-align:center !important;
+    align-items:center !important;
+  }
+}
   </style>
 </head>
 <body>

@@ -18,6 +18,31 @@
 
   <style>
     :root{
+  --ink: #0F172A;
+  --slate: #334155;
+  --brand: #0B7285;
+  --brand-soft: #0EA5B7;
+  --surface: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --line: #E2E8F0;
+}
+body{
+  background: var(--surface);
+  color: var(--ink);
+}
+    .btn{
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid #085a69;
+}
+.btn.soft{
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.hero{ background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); }
+section{ background: #fff; }
+    :root{
       --bg:#ffffff; --ink:#0f172a; --muted:#334155; --line:#e2e8f0;
       --brand:#0ea5b7; /* coastal-teal accent */
       --brand-dark:#0b7285;

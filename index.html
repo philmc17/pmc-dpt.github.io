@@ -328,6 +328,45 @@ html, body{
 }
 section{ background:#FFFFFF; }            /* keep sections on white cards for contrast */
 .hero{ background: #FFFFFF; }             /* keep hero clean (optional) */
+/* === Global light-gray background everywhere === */
+:root{
+  --ink:#0F172A;
+  --slate:#334155;
+  --brand:#0B7285;       /* inviting teal */
+  --brand-strong:#085a69;/* border/hover shade */
+  --bg-soft:#F5F7FA;     /* very light gray */
+  --line:#E2E8F0;
+}
+
+/* Set the whole page and all major containers to light gray */
+html, body,
+header, main, footer,
+section, .hero, .wrap, .container {
+  background: var(--bg-soft) !important;
+}
+
+/* Optional: if you used any "card" boxes, make them light gray too */
+.card{
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: none;
+}
+  /* === Teal buttons (Text / Call) === */
+.btn{
+  background: var(--brand) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--brand-strong) !important;
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.1;
+}
+.btn:hover{ filter: brightness(1.06); }
+.btn:active{ transform: translateY(1px); }
+.btn:focus{ outline: 2px solid var(--brand-soft, #0EA5B7); outline-offset: 2px; }
 
   </style>
 </head>

@@ -299,6 +299,22 @@ section{ background: #fff; }
 
 /* Tighter hero padding */
 .hero .wrap{ padding:28px 0 !important; }
+    /* Wordmark sizing and premium header spacing */
+.brand-img{
+  width: min(920px, 94vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure the brand area sits nicely with breathing room */
+.header-band{ padding: 28px 0 16px !important; }
+.hero .wrap{ padding: 28px 0 !important; }
+
+/* Desktop boost */
+@media (min-width:1024px){
+  .brand-img{ width: 920px; }
+}
   </style>
 </head>
 <body>

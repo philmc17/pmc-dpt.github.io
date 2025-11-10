@@ -482,6 +482,40 @@ section, .hero, .wrap, .container, .card{
   font-weight:700;
 }
 .btn:hover{ filter:brightness(1.06); }
+/* === HERO-ONLY SKY BACKGROUND (uses your PNG) === */
+.hero{
+  /* Layer 1: soft white gradient for legibility
+     Layer 2: the uploaded sky image */
+  background:
+    linear-gradient(to bottom,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.66) 64%,
+      var(--bg-soft, #F9FBFD) 100%),
+    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=1") center / cover no-repeat;
+  background-attachment: scroll;
+  padding: 48px 0 40px !important;
+  border: none;
+}
+
+/* Desktop refinement: more height and breathing room */
+@media (min-width: 1024px){
+  .hero{
+    min-height: 520px;
+    padding: 72px 0 56px !important;
+    background-position: center top;
+  }
+}
+
+/* Wordmark subtle clarity over imagery */
+.hero .brand-img{
+  display:block; margin:0 auto;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.04));
+}
+
+/* Headings remain crisp on the sky */
+.hero h1, .hero h2, .hero .lead{
+  text-shadow: 0 0 1px rgba(255,255,255,0.25);
+}
 
   </style>
 </head>

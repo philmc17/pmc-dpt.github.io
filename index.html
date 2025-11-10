@@ -437,6 +437,51 @@ section, .hero, .wrap, .container, .card {
   font-weight: 700;
   line-height: 1.1;
 }
+/* === Full-site background image with soft overlay === */
+:root{
+  --ink:#0F172A;
+  --slate:#334155;
+  --brand:#00B3B6;       /* Shiny Teal */
+  --brand-strong:#008A8C;
+  --line:#E6EDF3;
+}
+
+/* Put the image behind the entire page */
+html, body{ height:100%; }
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: url("/pmc-dpt.github.io/assets/bg-bridge.jpg") center / cover no-repeat fixed;
+}
+
+/* Soft white wash so text stays readable; adjust 0.70 → lighter/darker */
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255,255,255,0.70);
+}
+
+/* Let the background image show through: remove hard white cards */
+header, main, footer,
+section, .hero, .wrap, .container, .card{
+  background: transparent !important;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* Keep buttons in your brand teal */
+.btn{
+  background: var(--brand) !important;
+  color:#fff !important;
+  border:1px solid var(--brand-strong) !important;
+  border-radius:12px;
+  font-weight:700;
+}
+.btn:hover{ filter:brightness(1.06); }
 
   </style>
 </head>

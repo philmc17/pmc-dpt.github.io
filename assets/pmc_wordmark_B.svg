@@ -1,14 +1,18 @@
 <svg width="980" height="300" viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="980" height="300" fill="#FFFFFF"/>
+  <!-- Transparent background (no <rect> with white fill) -->
   <defs>
     <style><![CDATA[
       .name { font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-weight: 800; fill: #0F172A; letter-spacing: 1px; }
       .cred { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; fill: #334155; }
-      .tag  { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; fill: #0B7285; }
+      .tag  { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 600; fill: #00B3B6; }
     ]]></style>
   </defs>
+
   <text x="490" y="130" text-anchor="middle" class="name" font-size="60">PHILIP M. CHRIST</text>
-  <line x1="290" y1="152" x2="690" y2="152" stroke="#00B3B6" stroke-width="2"/>
+
+  <!-- Underline in Shiny Teal -->
+  <line x1="290" y1="152" x2="690" y2="152" stroke="#00B3B6" stroke-width="2" stroke-linecap="round"/>
+
   <text x="490" y="190" text-anchor="middle" class="cred" font-size="22">Doctor of Physical Therapy</text>
   <text x="490" y="228" text-anchor="middle" class="tag"  font-size="18">Exclusive. Private. Personalized. Care.</text>
 </svg>

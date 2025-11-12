@@ -554,32 +554,61 @@ header{ margin-bottom: 0 !important; }
 @media (max-width: 420px){
   .hero{ padding: 44px 0 36px !important; }
 }
- 
+ /* Seamless sky across header + hero */
+.topband{
+  width:100%;
+  display:block;
+  margin:0; padding:0;
+  background:
+    /* soft readability gradient */
+    linear-gradient(to bottom,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.66) 64%,
+      var(--bg-soft, #F9FBFD) 100%),
+    /* S1 sky image */
+    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=9") center top / cover no-repeat;
+}
+
+/* Make header + hero transparent so the wrapper shows through */
+header, .hero{
+  background: transparent !important;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+/* Comfortable hero spacing */
+.hero{
+  min-height: 520px;
+  padding: 72px 0 56px !important;
+}
+
+@media (max-width: 420px){
+  .hero{ min-height: 420px; padding: 44px 0 36px !important; }
+}
+
   </style>
 </head>
 <body>
 
   <!-- Header -->
+  <!-- Header + Hero wrapped for seamless background -->
+<div class="topband">
+  <!-- Header -->
   <header class="wrap header-band">
-  <!-- Corner logos -->
-  
-  <!-- Centered brand -->
-  <!-- Centered brand (Wordmark B) -->
-<section class="hero header-band">
-  style="background:
-           linear-gradient(to bottom,
-             rgba(255,255,255,0.20) 0%,
-             rgba(255,255,255,0.66) 64%,
-             var(--bg-soft, #F9FBFD) 100%),
-           url('/pmc-dpt.github.io/assets/hero-sky-s1.png?v=4') center / cover no-repeat;
-         background-attachment: scroll;
-         min-height: 520px;
-         padding: 72px 0 56px;">
-  <div class="brand-center">
-    <img src="/pmc-dpt.github.io/assets/pmc_wordmark_B.svg?v=7" class="brand-img" alt="Philip M. Christ — Doctor of Physical Therapy">
-    <!-- keep the rest of the existing content here unchanged -->
-  </div>
-</section>
+    <!-- Corner logos (optional) -->
+  </header>
+
+  <!-- Hero -->
+  <section class="hero header-band">
+    <div class="brand-center">
+      <img src="/pmc-dpt.github.io/assets/pmc_wordmark_B.svg?v=7"
+           class="brand-img"
+           alt="Philip M. Christ — Doctor of Physical Therapy">
+      <!-- keep the rest of the existing content here unchanged -->
+    </div>
+  </section>
+</div>
 
   <!-- Keep your navigation centered -->
   <nav style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px;">

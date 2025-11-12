@@ -491,7 +491,7 @@ section, .wrap, .container, .card{
       rgba(255,255,255,0.20) 0%,
       rgba(255,255,255,0.66) 64%,
       var(--bg-soft, #F9FBFD) 100%),
-    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=1") center / cover no-repeat;
+   
   background-attachment: scroll;
   padding: 48px 0 40px !important;
   border: none;
@@ -523,7 +523,7 @@ section, .wrap, .container, .card{
       rgba(255,255,255,0.20) 0%,
       rgba(255,255,255,0.66) 64%,
       var(--bg-soft, #F9FBFD) 100%),
-    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=2") center / cover no-repeat !important;
+   
   background-attachment: scroll !important;
   min-height: 520px;
   padding: 72px 0 56px !important;
@@ -537,7 +537,7 @@ header, .header-band, .hero{
       rgba(255,255,255,0.20) 0%,
       rgba(255,255,255,0.66) 64%,
       var(--bg-soft, #F9FBFD) 100%),
-    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=6") center top / cover no-repeat fixed !important;
+    
 }
 
 /* Remove any gap that could show a seam */
@@ -566,7 +566,7 @@ header{ margin-bottom: 0 !important; }
       rgba(255,255,255,0.66) 64%,
       var(--bg-soft, #F9FBFD) 100%),
     /* S1 sky image */
-    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=9") center top / cover no-repeat;
+    
 }
 
 /* Make header + hero transparent so the wrapper shows through */
@@ -596,7 +596,7 @@ header, .hero{
       rgba(255,255,255,0.20) 0%,
       rgba(255,255,255,0.66) 64%,
       var(--bg-soft, #F9FBFD) 100%),
-    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=11") center top / cover no-repeat;
+    
 }
 
 /* Header and hero must be transparent so the wrapper shows through */
@@ -616,6 +616,26 @@ header, .hero{
 @media (max-width: 420px){
   .hero{ min-height: 420px; padding: 44px 0 36px !important; }
 }
+/* === Global bridge background, full page, wall-to-wall === */
+html, body { height: 100%; margin: 0; }
+
+/* Paint the bridge once on the body */
+body{
+  background: url("/pmc-dpt.github.io/assets/bg-bridge.jpg?v=1") center / cover no-repeat fixed !important;
+}
+
+/* Ensure all sections let the bridge show through */
+header, main, footer,
+section, .hero, .wrap, .container, .card{
+  background: transparent !important;
+  box-shadow: none;
+  border-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Optional: if any blank gaps appear due to padding, keep them minimal */
+.header-band{ padding-top: 16px; padding-bottom: 12px; }
 
   </style>
 </head>

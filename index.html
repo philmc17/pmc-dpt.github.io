@@ -529,6 +529,32 @@ section, .wrap, .container, .card{
   padding: 72px 0 56px !important;
   border: none;
 }
+ /* === Unified sky across header + hero === */
+/* This paints ONE continuous sky that spans the header and the hero. */
+header, .header-band, .hero{
+  background:
+    linear-gradient(to bottom,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.66) 64%,
+      var(--bg-soft, #F9FBFD) 100%),
+    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=6") center top / cover no-repeat fixed !important;
+}
+
+/* Remove any gap that could show a seam */
+header{ margin-bottom: 0 !important; }
+.hero{  margin-top: 0 !important;  }
+
+/* Comfortable spacing for the hero content */
+.hero{
+  min-height: 520px;
+  padding: 72px 0 56px !important;
+}
+
+/* Optional: tighter space on mobile */
+@media (max-width: 420px){
+  .hero{ padding: 44px 0 36px !important; }
+}
+ 
   </style>
 </head>
 <body>
@@ -539,7 +565,7 @@ section, .wrap, .container, .card{
   
   <!-- Centered brand -->
   <!-- Centered brand (Wordmark B) -->
-<section class="hero header-band"
+<section class="hero header-band">
   style="background:
            linear-gradient(to bottom,
              rgba(255,255,255,0.20) 0%,

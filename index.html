@@ -539,7 +539,16 @@ section, .wrap, .container, .card{
   
   <!-- Centered brand -->
   <!-- Centered brand (Wordmark B) -->
-<section class="hero">
+<section class="hero header-band"
+  style="background:
+           linear-gradient(to bottom,
+             rgba(255,255,255,0.20) 0%,
+             rgba(255,255,255,0.66) 64%,
+             var(--bg-soft, #F9FBFD) 100%),
+           url('/pmc-dpt.github.io/assets/hero-sky-s1.png?v=4') center / cover no-repeat;
+         background-attachment: scroll;
+         min-height: 520px;
+         padding: 72px 0 56px;">
   <div class="brand-center">
     <img src="/pmc-dpt.github.io/assets/pmc_wordmark_B.svg?v=7" class="brand-img" alt="Philip M. Christ — Doctor of Physical Therapy">
     <!-- keep the rest of the existing content here unchanged -->

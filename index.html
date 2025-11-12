@@ -467,7 +467,7 @@ body::after{
 
 /* Let the background image show through: remove hard white cards */
 header, main, footer,
-section, .hero, .wrap, .container, .card{
+section, .wrap, .container, .card{
   background: transparent !important;
   box-shadow: none;
   border-color: transparent;
@@ -516,7 +516,19 @@ section, .hero, .wrap, .container, .card{
 .hero h1, .hero h2, .hero .lead{
   text-shadow: 0 0 1px rgba(255,255,255,0.25);
 }
-
+/* === FINAL HERO BACKGROUND OVERRIDE === */
+.hero{
+  background:
+    linear-gradient(to bottom,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.66) 64%,
+      var(--bg-soft, #F9FBFD) 100%),
+    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=2") center / cover no-repeat !important;
+  background-attachment: scroll !important;
+  min-height: 520px;
+  padding: 72px 0 56px !important;
+  border: none;
+}
   </style>
 </head>
 <body>

@@ -502,7 +502,7 @@ section, .wrap, .container, .card{
   .hero{
     min-height: 520px;
     padding: 72px 0 56px !important;
-    background-position: center top;
+    
   }
 }
 
@@ -570,6 +570,36 @@ header{ margin-bottom: 0 !important; }
 }
 
 /* Make header + hero transparent so the wrapper shows through */
+header, .hero{
+  background: transparent !important;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+/* Comfortable hero spacing */
+.hero{
+  min-height: 520px;
+  padding: 72px 0 56px !important;
+}
+
+@media (max-width: 420px){
+  .hero{ min-height: 420px; padding: 44px 0 36px !important; }
+}
+/* Seamless sky across header + hero (single painter) */
+.topband{
+  width:100%;
+  display:block;
+  margin:0; padding:0;
+  background:
+    linear-gradient(to bottom,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.66) 64%,
+      var(--bg-soft, #F9FBFD) 100%),
+    url("/pmc-dpt.github.io/assets/hero-sky-s1.png?v=11") center top / cover no-repeat;
+}
+
+/* Header and hero must be transparent so the wrapper shows through */
 header, .hero{
   background: transparent !important;
   border: 0;
